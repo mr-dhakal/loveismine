@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Letter for You | Valentine's 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        :root {
+            --red: #e63946;
+            --soft-pink: #fff0f3;
+            --card-bg: rgba(255, 255, 255, 0.7);
+            --text: #4a4e69;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #fff0f3 0%, #ffdde1 100%);
+            color: var(--text);
+            overflow-x: hidden;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Dancing Script', cursive;
+            color: var(--red);
+        }
+
+        /* Hero Section */
+         /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1517457210348-703079e57d4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+
+        /* Greeting Card Section */
+        .card-container {
+            padding: 40px 20px;
+            perspective: 1000px;
+        }
+
+        .greeting-card {
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            animation: float 6s ease-in-out infinite;
+            position: relative;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(1deg); }
+        }
+
+        .card-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            font-weight: 400;
+            text-align: left;
+            opacity: 0;
+            animation: fadeInText 2s forwards 1s;
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card-header {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .divider {
+            width: 50px;
+            height: 2px;
+            background: var(--red);
+            margin: 20px 0;
+            border-radius: 2px;
+        }
+
+        /* Question Section */
+        .question-section {
+            padding: 80px 20px;
+            background: rgba(255, 255, 255, 0.3);
+            margin-top: 40px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button {
+            padding: 14px 40px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .yes-btn {
+            background-color: var(--red);
+            color: white;
+            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+        }
+
+        .no-btn {
+            background-color: white;
+            color: var(--text);
+        }
+
+        .hidden { display: none; }
+
+        /* Floating Elements */
+        .floating-heart {
+            position: fixed;
+            pointer-events: none;
+            z-index: -1;
+            color: var(--red);
+            opacity: 0.5;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(110vh) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        
+        <h1>Dear Maya</h1>
+        <p>From <strong>Nepal</strong> to the world, fate brought us together.</p>
+        <div style="margin-top: 20px;">
+            <span class="location-badge">🇨🇦 Me (Canada)</span>
+            <span style="font-size: 20px;">✈️ ❤️ ✈️</span>
+            <span class="location-badge">🇺🇸 You (Nepal)</span>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="greeting-card">
+            <h2 class="card-header">To My Maya,</h2>
+            <div class="divider"></div>
+            <div class="card-content">
+                <p>Dear Maya🥰,</p>
+                <p>I know things went rough between us.😤
+But I want to fix everything and start all over again.🤗 Timro photo herda herda ma kailei thakina.😌But I just miss your voice and talking to you.😔</p>
+                <p>I can explain whatever happened during those 2-3 weeks jasle garda things went the other way. 😶‍🌫️ Jun tara ta todna sakidina hola sayed ma, tara I will support whatever you want to do.🙆🏼We can always be what we had thought we would be. 😋</p>
+                <p>The distance is hard, and the silence is even harder. But through it all, my feelings haven't changed. I'm still here, and I'm still yours.💕</p>
+                <p style="font-family: 'Dancing Script', cursive; font-size: 1.5rem; color: var(--red); text-align: right;">— Always, Yours</p>
+            </div>
+            <div class="buttons">
+            <button class="yes-btn" onclick="startSurprise()">CONTINUE</button>
+        </div>
+        </div>
+    </div>
+    
+    <!-- <div class="question-section" id="ask-section">
+        <h2>I still have one question...</h2>
+        <p>Will you be my Valentine?</p>
+        
+        <div class="buttons">
+            <button class="yes-btn" onclick="sheSaidYes()">YES! ❤️</button>
+            <button class="no-btn" id="noBtn" onmouseover="moveButton()" onclick="moveButton()">No</button>
+        </div>
+
+        <div id="success-message" class="hidden" style="margin-top: 30px;">
+            <h2>I knew it! ❤️</h2>
+            <p>You just made my day in Canada so much brighter.<br>Can't wait to talk to you again.</p>
+            <p style="font-size: 3rem;">🥰</p>
+        </div>
+    </div> -->
+
+    <script>
+        // "No" button logic
+        function moveButton() {
+            const noBtn = document.getElementById('noBtn');
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+            noBtn.style.position = 'fixed';
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        }
+
+        // "Yes" button logic
+        function sheSaidYes() {
+            document.querySelector('.buttons').style.display = 'none';
+            document.getElementById('success-message').classList.remove('hidden');
+            
+            var duration = 4000;
+            var animationEnd = Date.now() + duration;
+            var interval = setInterval(function() {
+                var timeLeft = animationEnd - Date.now();
+                if (timeLeft <= 0) return clearInterval(interval);
+                confetti({
+                    particleCount: 40,
+                    startVelocity: 30,
+                    spread: 360,
+                    origin: { x: Math.random(), y: Math.random() - 0.2 }
+                });
+            }, 250);
+        }
+
+        // Soft heart animation
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('floating-heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.top = "-5vh";
+            heart.style.fontSize = (Math.random() * 15 + 10) + "px";
+            heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 6000);
+        }
+        setInterval(createHeart, 500);
+
+        function startSurprise() {
+            // This redirects to the valentine page
+            window.location.href = "next.html";
+        }
+    </script>
+</body>
+</html>
